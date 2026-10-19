@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campus Events Guide | Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+  <input type="checkbox" id="theme-toggle" class="theme-toggle">
+
+  <div class="page">
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="site-name" href="index.html">Campus Events Guide</a>
+        <nav aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="event-details.html">Event Details</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a class="current" href="registration.html">Register</a></li>
+          </ul>
+        </nav>
+        <label for="theme-toggle" class="theme-label">Dark / Light</label>
+      </div>
+    </header>
+
+    <main>
+
+      <section class="hero">
+        <h1>Register for a Campus Event</h1>
+        <p class="meta">Featured event: Intel Campus Cup, 13&ndash;14 October 2026.</p>
+        <p>Registration is also available for Graduation Ceremony 2026 (5 November) and Career Fair 2026 (24 November). Choose your event below.</p>
+        <p>Select the event you plan to attend, then use its matching date and arrival time. Entry details vary by event; see the event details page before you register.</p>
+      </section>
+
+      <div class="details-grid">
+
+        
+        <section id="registration-form">
+          <h2>Registration form</h2>
+
+          <form action="#" method="post" enctype="multipart/form-data">
+
+            
+            <div>
+              <label for="reg-name">Attendee name</label>
+              <input type="text" id="reg-name" name="attendee_name" required maxlength="50"
+                     pattern="[\p{L}][\p{L} .'-]{1,49}" title="Enter 2 to 50 letters, spaces, apostrophes, periods, or hyphens"
+                     placeholder="Your full name">
+            </div>
+
+            
+            <div>
+              <label for="reg-email">Contact email</label>
+              <input type="email" id="reg-email" name="email" required maxlength="80"
+                     placeholder="you@example.com">
+              <p class="hint">Use an email address you can check for event updates.</p>
+            </div>
+
+            
+            <div>
+              <label for="reg-link">Portfolio, LinkedIn, or other profile link (optional)</label>
+              <input type="url" id="reg-link" name="profile_link" maxlength="120"
+                     pattern="https://.*" title="The link must start with https://"
+                     placeholder="https://">
+            </div>
+
+            
+            <div>
+              <label for="reg-team">Number of people in your group</label>
+              <input type="number" id="reg-team" name="team_size" min="1" max="10" value="1" required>
+              <p class="hint">Enter 1 to 10 attendees, including yourself.</p>
+            </div>
+
+            
+            <div>
+              <label for="reg-skill">Interest level for this event (1 = low, 10 = high)</label>
+              <input type="range" id="reg-skill" name="skill_level" min="1" max="10" value="5">
+            </div>
+
+            
+            <div>
+              <label for="reg-date">Date of your selected event</label>
+              <input type="date" id="reg-date" name="preferred_date" required>
+            </div>
+
+            
+            <div>
+              <label for="reg-time">Approximate arrival time</label>
+              <input type="time" id="reg-time" name="arrival_time" required>
+              <p class="hint">Check the selected event details for its opening time.</p>
+            </div>
+
+            
+            <div>
+              <label for="reg-color">Preferred name badge color</label>
+              <input type="color" id="reg-color" name="team_color" value="#0068b5">
+            </div>
+
+            
+            <div>
+              <label for="reg-event">Event choice</label>
+              <select id="reg-event" name="event_choice" required>
+                <option value="">Choose an event</option>
+                <option value="intel-campus-cup">Intel Campus Cup (13–14 October 2026)</option>
+                <option value="graduation">Graduation Ceremony 2026 (5 November 2026)</option>
+                <option value="career-fair">Career Fair 2026 (24 November 2026)</option>
+              </select>
+            </div>
+
+            
+            <fieldset>
+              <legend>Which best describes you?</legend>
+              <div class="choice">
+                <input type="radio" id="reg-player" name="attendance" value="student" required>
+                <label for="reg-player">Student or graduate</label>
+              </div>
+              <div class="choice">
+                <input type="radio" id="reg-visitor" name="attendance" value="guest">
+                <label for="reg-visitor">Guest</label>
+              </div>
+            </fieldset>
+
+            
+            <fieldset>
+              <legend>Optional follow-up</legend>
+              <div class="choice">
+                <input type="checkbox" id="reg-merch" name="extras" value="career-updates">
+                <label for="reg-merch">Career and event updates</label>
+              </div>
+              <div class="choice">
+                <input type="checkbox" id="reg-photos" name="extras" value="follow-up">
+                <label for="reg-photos">Follow-up information about this event</label>
+              </div>
+            </fieldset>
+
+            
+            <div>
+              <label for="reg-id">Optional supporting file (for example, a CV for the Career Fair)</label>
+              <input type="file" id="reg-id" name="supporting_file" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+            </div>
+
+            
+            <div>
+              <label for="reg-access">Access needs</label>
+              <textarea id="reg-access" name="access_needs" rows="4" maxlength="300"
+                        placeholder="Tell us if you need any support at the venue"></textarea>
+              <p class="hint">Maximum 300 characters.</p>
+            </div>
+
+            
+            <div class="choice">
+              <input type="checkbox" id="reg-rules" name="rules" value="agreed" required>
+              <label for="reg-rules">I agree to follow the event rules</label>
+            </div>
+
+            <button type="submit">Register</button>
+
+          </form>
+        </section>
+
+        
+        <aside>
+          <section class="info-box">
+            <h3>Registration guidance</h3>
+            <ul>
+              <li><strong>Intel Campus Cup organizer:</strong> Zewail Esports</li>
+              <li><strong>Email:</strong> <a href="mailto:esports@zewailcity.edu.eg">esports@zewailcity.edu.eg</a></li>
+              <li><strong>Venue:</strong> See the selected event details</li>
+              <li><strong>Entry:</strong> Requirements vary by event; check its details before registering</li>
+            </ul>
+            <p><a href="event-details.html">Back to event details</a></p>
+          </section>
+        </aside>
+
+      </div>
+
+    </main>
+
+    <footer class="site-footer">
+      <ul class="social-links">
+        <li><a href="https://www.facebook.com/ZewailCity" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://www.linkedin.com/school/zewailcityst/" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+      <p>&copy; 2026 Campus Events Guide</p>
+    </footer>
+
+  </div>
+</body>
+</html>

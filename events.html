@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campus Events Guide | Events</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+  <input type="checkbox" id="theme-toggle" class="theme-toggle">
+
+  <div class="page">
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="site-name" href="index.html">Campus Events Guide</a>
+        <nav aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a class="current" href="events.html">Events</a></li>
+            <li><a href="event-details.html">Event Details</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="registration.html">Register</a></li>
+          </ul>
+        </nav>
+        <label for="theme-toggle" class="theme-label">Dark / Light</label>
+      </div>
+    </header>
+
+    <main>
+
+      <section class="hero">
+        <h1>Event catalogue</h1>
+        <p>Browse upcoming and past events at Zewail City. Each card shows the date, venue, and category.</p>
+      </section>
+
+      
+      <section>
+        <h2>Upcoming events</h2>
+
+        <div class="card-grid">
+
+          <article class="card" id="graduation">
+            <img src="assets/graduation.jpg" alt="Graduates in caps and gowns celebrating">
+            <div class="card-body">
+              <span class="badge">Ceremony</span>
+              <h3>Graduation Ceremony 2026</h3>
+              <p class="meta">5 November 2026</p>
+              <p>Main Auditorium, Zewail City</p>
+              <a class="btn" href="event-details.html#graduation">View details</a>
+              <a class="btn" href="registration.html#registration-form">Register</a>
+            </div>
+          </article>
+
+          <article class="card" id="career-fair">
+            <img src="assets/career.jpg" alt="Students exploring a campus technology exhibition">
+            <div class="card-body">
+              <span class="badge">Career</span>
+              <h3>Career Fair 2026</h3>
+              <p class="meta">24 November 2026</p>
+              <p>Student Activities Hall, Zewail City</p>
+              <a class="btn" href="event-details.html#career-fair">View details</a>
+              <a class="btn" href="registration.html#registration-form">Register</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      
+      <section>
+        <h2>Past events</h2>
+
+        <div class="card-grid">
+
+          
+          <article class="card" id="intel-campus-cup">
+            <img src="assets/poster.jpg" alt="Players competing in a VALORANT match at the Intel Campus Cup">
+            <div class="card-body">
+              <span class="badge">Gaming / Esports</span>
+              <h3>Intel Campus Cup</h3>
+              <p class="meta">13&ndash;14 October 2026</p>
+              <p>Academic Building, Zewail City</p>
+              <a class="btn" href="event-details.html#intel-campus-cup">View details</a>
+              <a class="btn" href="registration.html#registration-form">Register</a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <ul class="social-links">
+        <li><a href="https://www.facebook.com/ZewailCity" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://www.linkedin.com/school/zewailcityst/" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+      <p>&copy; 2026 Campus Events Guide</p>
+    </footer>
+
+  </div>
+</body>
+</html>
